@@ -1,0 +1,68 @@
+@use './_variables.scss' as v;
+
+.carousel-container {
+    align-items: center;
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 0 auto;
+    overflow: hidden;
+    // width: 600px;
+
+    .carousel-item {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 10px;
+        width: 100%;
+
+        img {
+            margin-right: 10px;
+            max-width: 50%;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+.slick-container {
+    margin: 0 auto;
+    width: 600px;
+
+    .slick-slider {
+        -webkit-user-select: text;
+        -khtml-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;
+        user-select: text;
+    }
+
+    .slick-list {
+        width: 100%;
+
+        .slick-slide > div > div {
+            align-items: center;
+            display: flex !important;
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        img {
+            margin-right: 10px;
+            max-width: 50%;
+        }
+    }
+
+    .slick-prev,
+    .slick-next {
+        &::before {
+            color: v.$black;
+        }
+    }
+}

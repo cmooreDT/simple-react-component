@@ -1,0 +1,27 @@
+[
+    {
+        "image": "images/kitten01.jpg",
+        "description": "Brown tabby kitten running through a field of grass",
+        "details": "A kitten is a juvenile cat. After being born, kittens display primary altriciality and are fully dependent on their mothers for survival. Domestic kittens are highly social animals and usually enjoy human companionship."
+    },
+    {
+        "image": "images/kitten02.jpg",
+        "description": "Calico tabby kitten climbing a tree",
+        "details": "The word \"kitten\" derives from the Middle English word kitoun, which in turn came from the Old French chitoun or cheton. Juvenile big cats are called \"cubs\" rather than kittens; either term (but usually more commonly \"kitten\") may be used for the young of smaller wild felids, such as ocelots, caracals, and lynxes."
+    },
+    {
+        "image": "images/kitten03.jpg",
+        "description": "One black and two gray tabby kittens standing in hay",
+        "details": "A feline litter usually consists of two to five kittens, but litters with one to more than ten are known. Kittens are typically born after a gestation lasting between 64 and 67 days, with an average length of 66 days."
+    },
+    {
+        "image": "images/kitten04.jpg",
+        "description": "Two orange kittens sleeping and snuggling on a cat tree",
+        "details": "Kittens develop very quickly from about two weeks of age until their seventh week. Their coordination and strength improve, and they play-fight with their litter-mates and begin to explore the world outside the nest or den."
+    },
+    {
+        "image": "images/kitten05.jpg",
+        "description": "Two fluffy white kittens sitting on a wooden crate",
+        "details": "Domestic kittens are commonly sent to new homes at six to eight weeks of age, but it has been suggested that being with their mother and litter-mates from six to twelve weeks is important for a kitten's social and behavioural development"
+    }
+]
