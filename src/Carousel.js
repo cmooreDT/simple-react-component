@@ -12,6 +12,7 @@ export default class AppendDots extends Component {
     };
     render(){
         const allCount = document.getElementsByClassName('slide-button').length;
+        const currentImage = this.state.activeSlide + 1;
         const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
             <button
                 {...props}
@@ -52,44 +53,20 @@ export default class AppendDots extends Component {
             lazyLoad: false,
             prevArrow: <SlickArrowLeft />,
             nextArrow: <SlickArrowRight />,
-            // nextArrow: (
-            //     <div aria-label="next slide">
-            //     </div>
-            // ),
-            // prevArrow: (
-            //     <div aria-label="previous slide">
-            //     </div>
-            // ),
-            // appendDots: function(dots) {
-            //     return (
-            //         <div
-            //         style={{
-            //             backgroundColor: "#ddd",
-            //             borderRadius: "10px",
-            //             padding: "10px"
-            //         }}
-            //         aria-label={`${dots.length} slides total`}
-            //         >
-            //             <ul style={{ margin: "0px" }}>{dots}</ul>
-            //         </div>
-            //     )
-            // },
             beforeChange: (current, next) => {
                 this.setState({ activeSlide: next });
             },
             afterChange: current => {
                 this.setState({ activeSlide2: current });
-                // const pageCount = document.querySelector('.slick-dots ul')?.childElementCount;
-                // console.log(`${current} / ${pageCount} `);
             },
             customPaging: function(i) {
-                // const slideCount = document.querySelectorAll('.slick-dots ul li').length;
                 return (
                     <button
                     className="slide-button"
-                    // aria-label={`Slide ${i + 1} of ${slideCount}`}>
-                    id={`slide-${i + 1}`}
-                    aria-label={`Slide ${i + 1} of ${allCount}`}>
+                    id={`Navigate to slide-${i + 1}`}
+                    aria-label={`${currentImage === i + 1 ? "Current" : "Show"} slide ${i + 1} of ${allCount}`}
+                    aria-disabled={currentImage === i + 1 ? true : false}
+                    aria-controls={i + 1}>
                         {i + 1}
                     </button>
                 )
@@ -99,18 +76,18 @@ export default class AppendDots extends Component {
             <div className="App">
                 <div className="slick-container">
                     <h2>React Slick Carousel Component</h2>
+                    {/*
+                    The following paragraphs are meant for debugging purposes
                     <p>
-                        Slide count {allCount}
-                    </p>
-                    {/* <p>
-                        BeforeChange =&gt; activeSlide: <strong>{this.state.activeSlide}</strong>
+                        Kitten count {allCount}
                     </p>
                     <p>
-                        AfterChange =&gt; activeSlide: <strong>{this.state.activeSlide2}</strong>
-                    </p> */}
+                        Current kitten {currentImage}
+                    </p>
+                    */}
                     <Slider {...settings}>
                         {data.map((item, index) => (
-                            <div key={index} id={index} aria-label={`Slide ${index + 1} of ${data.length}`}>
+                            <div key={index} id={index + 1} aria-label={`Slide ${index + 1} of ${data.length}`} aria-labelledby={`slide-${index + 1}`} aria-current={this.state.activeSlide === index ? true : false}>
                                 <img src={item.image} alt={item.description} />
                                 <p>{item.details}</p>
                             </div>
