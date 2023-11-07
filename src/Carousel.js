@@ -74,8 +74,7 @@ export default class AppendDots extends Component {
         };
         return (
             <div className="App">
-                <div className="slick-container">
-                    <h2>React Slick Carousel Component</h2>
+                <div className="slick-container" role="region" aria-label="Carousel">
                     {/*
                     The following paragraphs are meant for debugging purposes
                     <p>

@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <h1>Accessible React Slick Carousel Component</h1>
     <Carousel />
   </React.StrictMode>
 );
